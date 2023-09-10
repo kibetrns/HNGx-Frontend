@@ -1,0 +1,44 @@
+body {
+    margin: 2% 25%;
+}
+
+#card {
+    display: flex;
+    width: 100%;
+    padding: 4%;
+    border: 1px solid black;
+    border-radius: 2rem;
+}
+
+
+[data-testid="slackDisplayImage"] {
+    width: 100%;
+    height: 100%;
+}
+
+#card_Right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 4%;
+    width: 100%;
+}
+
+
+#date-time-cont {
+    display: flex;
+}
+
+
+[data-testid=currentUTCTime] {
+    margin-left: 4%;
+}
+
+
+[data-testid=“githubURL”] {
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    padding: 0% 4%;
+    text-decoration: none;
+}
