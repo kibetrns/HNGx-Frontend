@@ -1,0 +1,36 @@
+[data-testid="movie-card"] {
+    border: 1px solid black;
+    width: 16.3rem;
+    display: flex;
+    flex-direction: column;
+
+    
+
+}
+
+[data-testid="movie-poster"] {
+    width: 16.3rem;
+    height: 50%;
+    background-color: yellow;
+
+}
+
+[data-testid="movie-title"] {
+    margin: 0%;
+
+}
+
+[data-testid="movie-release-date"] {
+    margin: 0%;
+
+}
+
+#rating-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0%;
+}
+
+#genres-container {
+    margin: 0%;
+}

@@ -1,0 +1,25 @@
+#top-ml-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 4%;
+
+}
+
+#see-more{
+    display: flex;
+    align-items: center;
+    width: 5rem;
+    justify-content: space-between;
+    color: #B91C1C;
+    cursor: pointer;
+}
+
+
+#body-ml-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-gap: 4rem;
+    padding: 0% 4%;
+
+}
