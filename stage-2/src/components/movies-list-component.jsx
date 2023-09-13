@@ -1,5 +1,6 @@
 import "../styles/movies-list-component.css";
 import MovieCardComponent from "./movie-card-component";
+import { Link } from "react-router-dom";
 
 function MoviesListComponent({topMovies}) {
 
@@ -27,6 +28,8 @@ function MoviesListComponent({topMovies}) {
       <div id = "top-ml-container">
 
         <h1>Featured Movie</h1>
+
+
 
         <div id="see-more">
             <h5>See more </h5>

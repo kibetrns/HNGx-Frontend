@@ -1,0 +1,91 @@
+
+#movie-video-container__Top {
+    display: flex;
+
+    
+
+}
+
+
+#movie-video-container__Bottom {
+
+}
+
+
+#movie-video-container__Bottom-Header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+
+}
+
+.other-half {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+
+#genre-list-container{
+    display: flex;
+    align-items: center;
+
+    
+
+ 
+
+
+}
+
+#genre-list-container p {
+    border:  0.2rem solid #f8e7eb;
+    margin: 0rem 0.2rem;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+
+}
+
+.genre {
+
+}
+
+#star-ratings-cont {
+    display: flex;
+    align-items: center;
+
+}
+
+#star-icon {
+    color: yellow;
+}
+
+#movie-video-container__Bottom-Left {
+
+}
+
+#participants-container {
+ 
+}
+
+#participants-container-item {
+    display: flex;
+}
+
+#participants-container-item p {
+    margin: 0rem 0.2rem;
+
+
+}
+
+#show-times-container {
+
+}
+
+#watch-more-options {
+
+}
+
+#movie-recommendations-container {
+
+}
