@@ -1,4 +1,4 @@
-# See it Live [here](https://kibetrns-hngxfrontend-stage2.netlify.app/)
+# See it Live [here](https://kibetrns-hngxfrontend-stage2.onrender.com/)
 
 # Running the App
 
