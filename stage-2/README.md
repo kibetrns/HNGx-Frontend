@@ -21,7 +21,10 @@ Navigate to stage-2 directory
 ```
 cd stage-2
 ```
-
+Install packages
+```
+npm install
+```
 Run the app:
 ```
 npm run dev
