@@ -1,0 +1,11 @@
+#upcomming-page-container {
+  display: grid;
+}
+
+.nav-rail-container-pg {
+  grid-column: 1 / 2;
+}
+
+.main-content-container-pg {
+  grid-column: 2 / 3;
+}

@@ -1,10 +1,24 @@
 #nav-rail-container {
     border: 0.15rem solid gray;
-    width:fit-content;
+    width: fit-content;
     width: 16vw;
-    height: 100vh;
+    height: 100%;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    display: grid;
+    row-gap: 1rem;
+}
+
+#branding-container {
+    grid-row: 1 / 2;
+}
+
+#nav-items-container {
+    grid-row: 2 / 3;
+}
+
+#log-out-nav-item-container {
+    grid-row: 4 / 5;
 }
 
 .nav-item {
@@ -12,7 +26,6 @@
     align-items: center;
     padding: 0rem 2rem;
     margin: 1rem 0rem;
-    color: gray;
 }
 
 #playQuiz-container {
@@ -22,9 +35,7 @@
     border-radius: 1em;
     background-color: #fcf5f7;
     color: #5b5a5a;
-    
-
-
+    grid-row: 3 / 4;
 }
 
 #playQuiz-container button {
@@ -34,12 +45,20 @@
     background-color: #f0c8d2;
     cursor: pointer;
     border: none;
-    
 }
-
-
 
 .nav-item p {
     margin-left: 2rem;
+}
 
+.inActiveNavItem {
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+}
+
+.activeNavItem {
+    text-decoration: none;
+    color: #be123c;
+    font-weight: bold;
 }

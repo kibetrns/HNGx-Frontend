@@ -2,18 +2,16 @@
     display: flex;
     justify-content: space-between;
     padding: 0% 4%;
-
 }
 
-#see-more{
+#see-more {
     display: flex;
     align-items: center;
     width: 5rem;
     justify-content: space-between;
-    color: #B91C1C;
+    color: #b91c1c;
     cursor: pointer;
 }
-
 
 #body-ml-container {
     display: grid;
@@ -21,5 +19,4 @@
     grid-template-rows: auto auto;
     grid-gap: 4rem;
     padding: 0% 4%;
-
 }

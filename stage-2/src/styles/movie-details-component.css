@@ -1,25 +1,102 @@
-
-#movie-video-container__Top {
-    display: flex;
-
-    
-
+#movie-details-contianer {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 1%;
 }
 
-
-#movie-video-container__Bottom {
-
+#movie-details-contianer__Top {
+    width: 100%;
+    grid-column: 1 / 2;
 }
 
+#movie-details-contianer__Top img {
+    width: 100%;
+}
 
-#movie-video-container__Bottom-Header {
-    display: flex;
+#movie-details-contianer__Top video {
+    width: 100%;
+}
+
+#movie-details-contianer__Bottom {
+    grid-row: 2 / 3;
+    display: grid;
+    column-gap: 1rem;
+    padding: 2rem;
+}
+
+#movie-details-contianer__Bottom__Left {
     align-items: center;
+    display: grid;
     width: 100%;
     justify-content: space-between;
-
-
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    row-gap: 1rem;
 }
+
+#movie-details-contianer__Bottom__Left--Top {
+    grid-row: 1 / 2;
+}
+
+#header {
+    display: flex;
+}
+
+#movie-details-contianer__Bottom__Left--Middle {
+    display: flex;
+    grid-row: 2 / 3;
+}
+
+.participants-container-item {
+    display: flex;
+    width: 100%;
+}
+
+.participants-container-item-value {
+    color: #be123c;
+    margin-left: 1rem;
+}
+
+#movie-details-contianer__Bottom__Left--Lower {
+    display: flex;
+    grid-row: 3 / 4;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#top-rated-and-awards-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 0.1rem solid gray;
+    border-radius: 1rem;
+}
+
+#top-rated-container {
+    background-color: #be123c;
+    color: white;
+    padding: 0.2rem;
+    border-radius: 1rem;
+}
+
+#awards-conainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#chevron-down-icon {
+    color: gray;
+    margin: 0rem 1rem;
+}
+
+#movie-details-contianer__Bottom__Right {
+    grid-column: 2 / 3;
+    display: grid;
+    row-gap: 1rem;
+}
+
+#movie-details-contianer__Bottom__Left--Top {}
 
 .other-half {
     display: flex;
@@ -27,65 +104,100 @@
     width: 20%;
 }
 
-#genre-list-container{
+#genre-list-container {
     display: flex;
     align-items: center;
-
-    
-
- 
-
-
 }
 
 #genre-list-container p {
-    border:  0.2rem solid #f8e7eb;
+    border: 0.2rem solid #f8e7eb;
     margin: 0rem 0.2rem;
     border-radius: 0.5rem;
     padding: 0.2rem;
-
 }
 
-.genre {
-
-}
+.genre {}
 
 #star-ratings-cont {
     display: flex;
     align-items: center;
-
+    justify-content: end;
 }
 
 #star-icon {
     color: yellow;
 }
 
-#movie-video-container__Bottom-Left {
-
+#movie-details-contianer__Bottom__Body {
+    display: grid;
 }
 
-#participants-container {
- 
+#movie-details-contianer__Bottom__Left {
+    grid-column: 1 / 2;
 }
 
-#participants-container-item {
-    display: flex;
-}
-
-#participants-container-item p {
-    margin: 0rem 0.2rem;
-
-
+#movie-details-contianer__Bottom__Right {
+    grid-column: 3 / 4;
 }
 
 #show-times-container {
-
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #be123c;
+    color: white;
+    margin: 1rem 0rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 #watch-more-options {
-
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #f0c8d2;
+    border: 0.1rem solid #be123c;
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
 
-#movie-recommendations-container {
+#movie-details-contianer__Bottom__Right--Lower {}
 
+#movie-details-contianer__Bottom__Right--Lower img {
+    width: 8rem;
+    border: 0.1rem solid black;
+}
+
+#recommend-movies-container {
+    display: flex;
+    border-radius: 1rem;
+    /* border: 0.1rem solid black; */
+    display: flex;
+}
+
+#recommendation-img {
+    border-radius: 1rem;
+    cursor: pointer;
+    margin: 0.1rem;
+}
+
+#recomendation-tag {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#recomendation-tag p {
+    margin-left: 1rem;
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
