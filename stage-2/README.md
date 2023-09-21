@@ -12,6 +12,8 @@ Before you begin, make sure you have the following prerequisites installed on yo
 
 - A web browser. 
 
+- A TMDBI [API KEY](https://developer.themoviedb.org/reference/intro/getting-started) - Get yourself this Key and the set this in the env variable ```VITE_APP_TMDB_API_KEY = <Your api key>```
+
 
 Clone the HNGx-Frontend and navigate to stage-2 directory:
 ```
