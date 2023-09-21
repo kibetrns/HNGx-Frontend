@@ -1,0 +1,55 @@
+#sign-up-container {
+    display: grid;
+
+    justify-items: center;
+
+    align-items: center;
+    width: 100%;
+}
+
+#sign-up-container__Top {}
+
+#sign-up-container__Middle {}
+
+#sign-up-container__Middle form {
+    display: grid;
+    margin: 1rem 0rem;
+}
+
+#sign-up-container__Middle button {
+    margin: 1rem auto;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-container input {
+    margin: 1rem 0rem;
+    border: none;
+    border-bottom: 0.1rem solid black;
+}
+
+input:focus {
+    outline: none;
+}
+
+.input-container__Right {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    padding: 0rem 1rem;
+}
+
+#sign-up-container__Bottom {}
+

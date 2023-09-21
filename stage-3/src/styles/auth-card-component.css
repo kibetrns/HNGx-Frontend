@@ -1,0 +1,34 @@
+#auth-container {
+    display: grid;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.1rem solid black;
+  column-gap: 2rem;
+  width: 50%;
+ 
+  
+    
+}
+
+#sign-or-login-container {
+    grid-column: 1 / 2;
+    padding: 1rem;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+#splash-image-n-compname-container {
+    grid-column:  2 / 3;
+    background-color: black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   
+   
+
+}
