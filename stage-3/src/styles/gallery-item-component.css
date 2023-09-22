@@ -1,0 +1,23 @@
+#gallery-item-container {
+
+    border: 0.1rem solid black;
+    text-align: center;
+
+}
+
+#image-container {
+    width: 100%;
+
+}
+
+#image-container img {
+    width: 100%;
+
+
+}
+
+#gallery-item-container {
+    display: grid;
+
+
+}

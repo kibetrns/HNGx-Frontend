@@ -1,0 +1,44 @@
+#home-page-container {
+    display: grid;
+    row-gap: 4rem;
+
+}
+
+#home-page-container__Header {
+    background-color: #A6955F;
+    color: white;
+    
+}
+
+#logo-and-name-conainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+#logo-and-name-conainer img {
+    max-width:4rem;
+   
+
+}
+
+#search-cont-x {
+    text-align: center;
+    margin: 0% 25%;
+}
+
+
+#home-page-container__Body {
+
+
+}
+
+#loading-spinner {
+    margin: 0% 40%;
+}
+
+#home-page-container__Footer {
+    text-align: center;
+
+}
