@@ -1,11 +1,7 @@
-
 export default function DojoComponent() {
-
-    return(
+    return (
         <>
-
-        <h1>Not Found</h1>
-        
+            <h1>Not Found</h1>
         </>
-    )
+    );
 }

@@ -2,7 +2,11 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/login-component.css";
 import React, { useState, useEffect } from "react";
 
-export default function LoginComponent({ onLoginFormSubmit, isLogInSuccess, onLoginInsteadClicked }) {
+export default function LoginComponent({
+    onLoginFormSubmit,
+    isLogInSuccess,
+    onLoginInsteadClicked,
+}) {
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -14,8 +18,8 @@ export default function LoginComponent({ onLoginFormSubmit, isLogInSuccess, onLo
         isSubmitted: false,
     });
 
-    const navigate = useNavigate(); 
-    
+    const navigate = useNavigate();
+
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setFormData({
@@ -33,7 +37,9 @@ export default function LoginComponent({ onLoginFormSubmit, isLogInSuccess, onLo
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        const emailValid = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email);
+        const emailValid = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+            formData.email
+        );
         const passwordValid = formData.password.trim() !== "";
 
         setValidationStatus({
@@ -80,14 +86,21 @@ export default function LoginComponent({ onLoginFormSubmit, isLogInSuccess, onLo
                             />
                             <div className="input-container__Right">
                                 {shouldShowCheckIcon("email") && (
-                                    <i className="fa-regular fa-circle-check" style={{ color: "green" }}></i>
+                                    <i
+                                        className="fa-regular fa-circle-check"
+                                        style={{ color: "green" }}
+                                    ></i>
                                 )}
-                                {validationStatus.isSubmitted && !validationStatus.emailValid && (
-                                    <>
-                                        <i className="fa-regular fa-circle-xmark" style={{ color: "red" }}></i>
-                                        <p className="error">Invalid email address</p>
-                                    </>
-                                )}
+                                {validationStatus.isSubmitted &&
+                                    !validationStatus.emailValid && (
+                                        <>
+                                            <i
+                                                className="fa-regular fa-circle-xmark"
+                                                style={{ color: "red" }}
+                                            ></i>
+                                            <p className="error">Invalid email address</p>
+                                        </>
+                                    )}
                             </div>
                         </div>
 
@@ -101,21 +114,29 @@ export default function LoginComponent({ onLoginFormSubmit, isLogInSuccess, onLo
                                 onChange={handleInputChange}
                                 required
                                 className={
-                                    validationStatus.isSubmitted && !validationStatus.passwordValid
+                                    validationStatus.isSubmitted &&
+                                        !validationStatus.passwordValid
                                         ? "invalid"
                                         : ""
                                 }
                             />
                             <div className="input-container__Right">
                                 {shouldShowCheckIcon("password") && (
-                                    <i className="fa-regular fa-circle-check" style={{ color: "green" }}></i>
+                                    <i
+                                        className="fa-regular fa-circle-check"
+                                        style={{ color: "green" }}
+                                    ></i>
                                 )}
-                                {validationStatus.isSubmitted && !validationStatus.passwordValid && (
-                                    <>
-                                        <i className="fa-regular fa-circle-xmark" style={{ color: "red" }}></i>
-                                        <p className="error">Password is required</p>
-                                    </>
-                                )}
+                                {validationStatus.isSubmitted &&
+                                    !validationStatus.passwordValid && (
+                                        <>
+                                            <i
+                                                className="fa-regular fa-circle-xmark"
+                                                style={{ color: "red" }}
+                                            ></i>
+                                            <p className="error">Password is required</p>
+                                        </>
+                                    )}
                             </div>
                         </div>
 
@@ -132,7 +153,10 @@ export default function LoginComponent({ onLoginFormSubmit, isLogInSuccess, onLo
                                 Go to Home
                             </Link>
                         ) : (
-                            <Link style={{ color: "#A6955F" }} onClick={onLoginInsteadClicked}>
+                            <Link
+                                style={{ color: "#A6955F" }}
+                                onClick={onLoginInsteadClicked}
+                            >
                                 Sign up
                             </Link>
                         )}

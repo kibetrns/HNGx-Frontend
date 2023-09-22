@@ -3,7 +3,15 @@ import "../styles/home-page.css";
 import GalleryComponent from "../components/gallery-component";
 import SearchBar from "../components/search-bar-component";
 
-function HomePage({ app, collection }) {
+function HomePage({ app }) {
+    const DATA_SOURCE_NAME = "mongodb-atlas";
+
+    const DATABASE_NAME = "sample_airbnb";
+    const COLLECTION_NAME = "listingsAndReviews";
+
+    const mongo = app.currentUser.mongoClient(DATA_SOURCE_NAME);
+    const collection = mongo.db(DATABASE_NAME).collection(COLLECTION_NAME);
+
     const [listOfTwelveAirBnBs, setListTwelveAirBnBs] = useState([]);
     const [showSpinner, setShowSpinner] = useState(true);
 

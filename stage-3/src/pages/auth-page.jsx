@@ -9,9 +9,12 @@ import LoginComponent from "../components/login-component";
 function AuthPage({ app, user, setUser }) {
     const [signedUp, setSignedUp] = useState(false);
     const [isLogInSuccess, setLogInSuccess] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleLoginFormSubmit = async (formData) => {
         try {
+            setIsLoading(true);
+
             const user = await app.logIn(
                 Realm.Credentials.emailPassword(formData.email, formData.password)
             );
@@ -21,11 +24,14 @@ function AuthPage({ app, user, setUser }) {
         } catch (error) {
             window.alert(`Failed!! User Not Logged In. Something went wrong`);
             console.log(error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
     const handleSignUpFormSubmit = async (formData) => {
         try {
+            setIsLoading(true);
             const email = formData.email;
             const password = formData.password;
 
@@ -43,6 +49,8 @@ function AuthPage({ app, user, setUser }) {
         } catch (error) {
             window.alert(`Failed!! New User Not Created. Something went wrong`);
             console.log(error);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -50,16 +58,20 @@ function AuthPage({ app, user, setUser }) {
         <>
             <AuthCardComponent
                 child={
-                    signedUp ? (
+                    isLoading ? (
+                        <div>
+                            <img src="loading_lottie.gif" alt="Loading..." />
+                        </div>
+                    ) : signedUp ? (
                         <LoginComponent
                             onLoginFormSubmit={handleLoginFormSubmit}
-                            onLoginInsteadClicked={() => setSignedUp(false)} 
+                            onLoginInsteadClicked={() => setSignedUp(false)}
                             isLogInSuccess={isLogInSuccess}
                         />
                     ) : (
                         <SignUpComponent
                             onSignUpFormSubmit={handleSignUpFormSubmit}
-                            onLoginInsteadClicked={() => setSignedUp(true)} 
+                            onLoginInsteadClicked={() => setSignedUp(true)}
                         />
                     )
                 }

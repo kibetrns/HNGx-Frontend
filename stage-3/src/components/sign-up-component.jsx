@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import "../styles/sign-up-component.css";
 import React, { useState } from "react";
 
-export default function SignUpComponent({ onSignUpFormSubmit , onLoginInsteadClicked}) {
-
+export default function SignUpComponent({
+    onSignUpFormSubmit,
+    onLoginInsteadClicked,
+}) {
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
@@ -31,7 +33,9 @@ export default function SignUpComponent({ onSignUpFormSubmit , onLoginInsteadCli
         event.preventDefault();
 
         const fullNameValid = formData.fullName.trim() !== "";
-        const emailValid = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email);
+        const emailValid = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+            formData.email
+        );
         const passwordValid = formData.password.trim() !== "";
         const confirmPasswordValid = formData.confirmPassword === formData.password;
 
@@ -76,7 +80,8 @@ export default function SignUpComponent({ onSignUpFormSubmit , onLoginInsteadCli
                                 onChange={handleInputChange}
                                 required
                                 className={
-                                    validationStatus.isSubmitted && !validationStatus.fullNameValid
+                                    validationStatus.isSubmitted &&
+                                        !validationStatus.fullNameValid
                                         ? "invalid"
                                         : ""
                                 }
@@ -84,15 +89,22 @@ export default function SignUpComponent({ onSignUpFormSubmit , onLoginInsteadCli
                             <div className="input-container__Right">
                                 {/* If validation correct */}
                                 {shouldShowCheckIcon("fullName") && (
-                                    <i className="fa-regular fa-circle-check" style={{ color: "green" }}></i>
+                                    <i
+                                        className="fa-regular fa-circle-check"
+                                        style={{ color: "green" }}
+                                    ></i>
                                 )}
                                 {/* If validation NOT correct */}
-                                {validationStatus.isSubmitted && !validationStatus.fullNameValid && (
-                                    <>
-                                        <i className="fa-regular fa-circle-xmark" style={{ color: "red" }}></i>
-                                        <p className="error">Full Name is required</p>
-                                    </>
-                                )}
+                                {validationStatus.isSubmitted &&
+                                    !validationStatus.fullNameValid && (
+                                        <>
+                                            <i
+                                                className="fa-regular fa-circle-xmark"
+                                                style={{ color: "red" }}
+                                            ></i>
+                                            <p className="error">Full Name is required</p>
+                                        </>
+                                    )}
                             </div>
                         </div>
 
@@ -114,15 +126,22 @@ export default function SignUpComponent({ onSignUpFormSubmit , onLoginInsteadCli
                             <div className="input-container__Right">
                                 {/* If validation correct */}
                                 {shouldShowCheckIcon("email") && (
-                                    <i className="fa-regular fa-circle-check" style={{ color: "green" }}></i>
+                                    <i
+                                        className="fa-regular fa-circle-check"
+                                        style={{ color: "green" }}
+                                    ></i>
                                 )}
                                 {/* If validation NOT correct */}
-                                {validationStatus.isSubmitted && !validationStatus.emailValid && (
-                                    <>
-                                        <i className="fa-regular fa-circle-xmark" style={{ color: "red" }}></i>
-                                        <p className="error">Invalid email address</p>
-                                    </>
-                                )}
+                                {validationStatus.isSubmitted &&
+                                    !validationStatus.emailValid && (
+                                        <>
+                                            <i
+                                                className="fa-regular fa-circle-xmark"
+                                                style={{ color: "red" }}
+                                            ></i>
+                                            <p className="error">Invalid email address</p>
+                                        </>
+                                    )}
                             </div>
                         </div>
 
@@ -136,7 +155,8 @@ export default function SignUpComponent({ onSignUpFormSubmit , onLoginInsteadCli
                                 onChange={handleInputChange}
                                 required
                                 className={
-                                    validationStatus.isSubmitted && !validationStatus.passwordValid
+                                    validationStatus.isSubmitted &&
+                                        !validationStatus.passwordValid
                                         ? "invalid"
                                         : ""
                                 }
@@ -144,15 +164,22 @@ export default function SignUpComponent({ onSignUpFormSubmit , onLoginInsteadCli
                             <div className="input-container__Right">
                                 {/* If validation correct */}
                                 {shouldShowCheckIcon("password") && (
-                                    <i className="fa-regular fa-circle-check" style={{ color: "green" }}></i>
+                                    <i
+                                        className="fa-regular fa-circle-check"
+                                        style={{ color: "green" }}
+                                    ></i>
                                 )}
                                 {/* If validation NOT correct */}
-                                {validationStatus.isSubmitted && !validationStatus.passwordValid && (
-                                    <>
-                                        <i className="fa-regular fa-circle-xmark" style={{ color: "red" }}></i>
-                                        <p className="error">Password is required</p>
-                                    </>
-                                )}
+                                {validationStatus.isSubmitted &&
+                                    !validationStatus.passwordValid && (
+                                        <>
+                                            <i
+                                                className="fa-regular fa-circle-xmark"
+                                                style={{ color: "red" }}
+                                            ></i>
+                                            <p className="error">Password is required</p>
+                                        </>
+                                    )}
                             </div>
                         </div>
 
@@ -166,7 +193,8 @@ export default function SignUpComponent({ onSignUpFormSubmit , onLoginInsteadCli
                                 onChange={handleInputChange}
                                 required
                                 className={
-                                    validationStatus.isSubmitted && !validationStatus.confirmPasswordValid
+                                    validationStatus.isSubmitted &&
+                                        !validationStatus.confirmPasswordValid
                                         ? "invalid"
                                         : ""
                                 }
@@ -174,15 +202,24 @@ export default function SignUpComponent({ onSignUpFormSubmit , onLoginInsteadCli
                             <div className="input-container__Right">
                                 {/* If validation correct */}
                                 {shouldShowCheckIcon("confirmPassword") && (
-                                    <i className="fa-regular fa-circle-check" style={{ color: "green" }}></i>
+                                    <i
+                                        className="fa-regular fa-circle-check"
+                                        style={{ color: "green" }}
+                                    ></i>
                                 )}
                                 {/* If validation NOT correct */}
-                                {validationStatus.isSubmitted && !validationStatus.confirmPasswordValid && (
-                                    <>
-                                        <i className="fa-regular fa-circle-xmark" style={{ color: "red" }}></i>
-                                        <p className="error" style={{ color: "red" }}>Password Mismatch</p>
-                                    </>
-                                )}
+                                {validationStatus.isSubmitted &&
+                                    !validationStatus.confirmPasswordValid && (
+                                        <>
+                                            <i
+                                                className="fa-regular fa-circle-xmark"
+                                                style={{ color: "red" }}
+                                            ></i>
+                                            <p className="error" style={{ color: "red" }}>
+                                                Password Mismatch
+                                            </p>
+                                        </>
+                                    )}
                             </div>
                         </div>
 
@@ -196,7 +233,11 @@ export default function SignUpComponent({ onSignUpFormSubmit , onLoginInsteadCli
                 </div>
                 <div id="sign-up-container__Bottom">
                     <p>
-                        I have an account <Link style={{ color: "#A6955F" }} onClick={onLoginInsteadClicked}>login</Link> instead
+                        I have an account{" "}
+                        <Link style={{ color: "#A6955F" }} onClick={onLoginInsteadClicked}>
+                            login
+                        </Link>{" "}
+                        instead
                     </p>
                 </div>
             </div>
