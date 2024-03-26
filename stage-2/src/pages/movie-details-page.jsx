@@ -7,7 +7,7 @@ import "../styles/movie-details-page.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const apiKey = import.meta.env.VITE_APP_TMDB_API_KEY;
+const apiKey = import.meta.env.VITE_APP_TMDB_ACCESS_TOKEN_AUTH;
 
 function MovieDetailsPage() {
     const { movieId } = useParams();

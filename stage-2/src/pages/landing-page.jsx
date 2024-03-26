@@ -7,7 +7,9 @@ import axios from "axios";
 import React, { useEffect, useState, useRef } from "react";
 import.meta.env.VITE_APP_TMDB_API_KEY;
 
-const apiKey = import.meta.env.VITE_APP_TMDB_API_KEY;
+const accessTokenAuth = import.meta.env.VITE_APP_TMDB_ACCESS_TOKEN_AUTH;
+
+const apiKeyAuth = import.meta.env.VITE_APP_TMDB_API_KEY_AUTH;
 
 function LandingPage() {
     const [movies, setMovies] = useState([]);
@@ -30,7 +32,7 @@ function LandingPage() {
                         page: 1,
                     },
                     headers: {
-                        Authorization: `Bearer ${apiKey}`,
+                        Authorization: `Bearer ${accessTokenAuth}`,
                     },
                 }
             );
@@ -59,7 +61,7 @@ function LandingPage() {
                         language: "en",
                     },
                     headers: {
-                        Authorization: `Bearer ${apiKey}`,
+                        Authorization: `Bearer ${accessTokenAuth}`,
                     },
                 }
             );
@@ -81,7 +83,7 @@ function LandingPage() {
                 `https://api.themoviedb.org/3/search/movie`,
                 {
                     params: {
-                        api_key: "c67958201d1aa872264c0fbd2dc6cf9c",
+                        api_key: `${apiKeyAuth}`,
                         language: "en-US",
                         query: query,
                     },
